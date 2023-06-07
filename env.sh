@@ -1,5 +1,14 @@
-docker run --name master --privileged --hostname master2 --add-host=slave1:172.18.0.3  --add-host=slave2:172.18.0.4 --add-host=slave3:172.18.0.5 -itd -v /cgsrc:/cgsrc:ro -v /headless/course/:/course hadoop_node /service_start.sh
+ #!/bin/bash
+ 
+"yes" | cp CumtHadoopLAB/second.sh /headless/course
 
-docker exec -it --privileged master1 /bin/bash
+"yes" | cp CumtHadoopLAB/core-site.xml /headless/course
+"yes" | cp CumtHadoopLAB/hdfs-site.xml /headless/course
+"yes" | cp CumtHadoopLAB/mapred-site.xml /headless/course
 
-docker ps
+"yes" | cp CumtHadoopLAB/yarn-site.xml /headless/course
+
+"yes" | cp CumtHadoopLAB/slaves /headless/course
+docker run --name master01 --privileged -itd -v /cgsrc:/cgsrc:ro -v /headless/course/:/course hadoop_node /service_start.sh
+
+docker exec -it master01 /bin/bash
