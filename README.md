@@ -60,7 +60,7 @@ chmod 777 /CumtHadoopLAB/third.sh
 ./CumtHadoopLAB/third.sh
 ```
 
-完成！接下来就可以从实验一的启动Hadoop集群。
+完成！接下来就是实验一的启动Hadoop集群。
 
 **但是还是要注意一点，**你第一次免密登录需要输入yes，这个**过程可能会导致启动失败**，建议进入master后先进行ssh登录其他三个节点。
 
