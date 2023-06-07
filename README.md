@@ -30,7 +30,7 @@ git clone https://github.com/Ekkoc2021/CumtHadoopLAB.git
 ```
 
 ```bash
-# 用一个新窗口打开，CumtHadoopLAB目录下的readme.md文件，将按照步骤copy命令即可。
+# 用一个新窗口打开，CumtHadoopLAB目录下的README.md文件，按照步骤copy命令即可。
 cat CumtHadoopLAB\README.md
 ```
 
