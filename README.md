@@ -20,9 +20,9 @@ docker rm -f master slave1 slave2 slave3 # 删除容器
 
 ## 开始
 
-安装git，装过可以跳过安装这一步。
 
 ```bash
+# 安装git，装过可以跳过安装这一步。
 apt install -y git 
 # 拉取仓库到本地
 # 执行完命令后，你可以在你执行clone命令的这个目录看到一个新的目录CumtHadoopLAB
