@@ -52,9 +52,36 @@ chmod 777 /CumtHadoopLAB/third.sh
 ./CumtHadoopLAB/third.sh
 ```
 
-完成！接下来就可以从实验一的启动Hadoop集群接着做就行。
+完成！接下来就可以从实验一的启动Hadoop集群。
 
+**但是还是要注意一点，**你第一次免密登录需要输入yes，这个**过程可能会导致启动失败**，建议进入master后先进行ssh登录其他三个节点。
 
+下面是实验一的启动Hadoop集群
+
+```bash
+docker exec -it master	/bin/bash
+
+# 这一步是使用掉首次ssh登录，输入yes，由于要输入yes，要一条一条复制的执行
+ssh master jps
+ssh slave1 jps
+ssh shave2 jps
+ssh slave3 jps
+
+#这几个命令好像只能一条一条的执行
+hdfs namenode -format
+
+#也能写成脚本一次运行，下次重启节点只要运行下面这条命令就行
+start-dfs.sh
+start-yarn.sh
+mr-jobhistory-daemon.sh start historyserver
+
+# 分别查看 个个节点的java进程情况，看看是否和实验要求一致！
+ssh master jps
+ssh slave1 jps
+ssh shave2 jps
+ssh slave3 jps
+
+```
 
 
 
