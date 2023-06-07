@@ -28,7 +28,7 @@ apt install -y git
 # 执行完命令后，你可以在你执行clone命令的这个目录看到一个新的目录CumtHadoopLAB
 git clone https://github.com/Ekkoc2021/CumtHadoopLAB.git
 ```
-
+可以在CumtHadoopLAB目录下看到当前文档，直接在实验的环境里面copy，效率会高一点：
 ```bash
 # 用一个新窗口打开，CumtHadoopLAB目录下的README.md文件，按照步骤copy命令即可。
 cat CumtHadoopLAB/README.md
