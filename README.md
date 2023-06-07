@@ -83,7 +83,7 @@ start-dfs.sh
 start-yarn.sh
 mr-jobhistory-daemon.sh start historyserver
 
-# 分别查看 个个节点的java进程情况，看看是否和实验要求一致！
+# 分别查看 各个节点的java进程情况，看看是否和实验要求一致！
 ssh master jps
 ssh slave1 jps
 ssh shave2 jps
