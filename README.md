@@ -56,7 +56,7 @@ chmod 0600 ~/.ssh/authorized_keys
 exit
 
 # 执行第三个脚本
-chmod 777 /CumtHadoopLAB/third.sh
+chmod 777 CumtHadoopLAB/third.sh
 ./CumtHadoopLAB/third.sh
 ```
 
