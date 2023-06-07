@@ -1,10 +1,10 @@
 # CumtHadoopLAB
 
-实验一docker搭建hadoop的脚本，已经尽可能简化命令输入了，欢迎和我交流。
+实验一docker搭建hadoop的脚本，已经尽可能简化命令输入了。
 
 
 
-如果你的环境是完全新的环境，你需要加载老师提供的镜像，如果不是而且你需要重做实验一，你只要把原来master，slave容器删除即可，按照你的需要执行下面两行命令。
+如果你的环境是完全新的环境，你需要加载老师提供的镜像，如果不是且你需要重做实验一，你只要把原来master，slave容器删除即可，按照你的需要执行下面两行命令。
 
 ```bash
 docker load < /cg/images/hadoop_node.tar.gz # 载入的镜像
@@ -16,15 +16,13 @@ docker rm -f master slave1 slave2 slave3 # 删除容器
 
 
 
-如果没有安装git，先安装git
+## 开始
+
+安装git，装过可以跳过安装这一步。
 
 ```bash
 apt install -y git 
 ```
-
-
-
-## 开始
 
 ```bash
 # 拉取仓库到本地
