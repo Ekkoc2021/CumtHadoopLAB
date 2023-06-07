@@ -1,6 +1,8 @@
 # CumtHadoopLAB
 
-实验一docker搭建hadoop的脚本，已经尽可能简化命令输入了。
+
+
+实验一docker搭建hadoop的脚本，尽可能的简化步骤，有些小伙伴可能因为桌面还原导致各个别实验之间出现了环境隔离，需要一直重复做实验一，下面这个几个脚本可能对你重新做实验一有帮助。
 
 
 
@@ -22,13 +24,19 @@ docker rm -f master slave1 slave2 slave3 # 删除容器
 
 ```bash
 apt install -y git 
-```
-
-```bash
 # 拉取仓库到本地
 # 执行完命令后，你可以在你执行clone命令的这个目录看到一个新的目录CumtHadoopLAB
 git clone https://github.com/Ekkoc2021/CumtHadoopLAB.git
+```
 
+```bash
+# 用一个新窗口打开，CumtHadoopLAB目录下的readme.md文件，将按照步骤copy命令即可。
+cat CumtHadoopLAB\readme.md
+```
+
+
+
+```bash
 # 执行第一个脚本
 chmod 777 CumtHadoopLAB/env.sh
 ./CumtHadoopLAB/env.sh
@@ -83,13 +91,11 @@ ssh slave3 jps
 
 ```
 
+------
 
+------
 
-
-
-
-
-
+------
 
 后续因为某些原因导致集群环境出现**完全不可逆转**的问题，你直接执行我提供第4个的脚本即可。
 
@@ -107,7 +113,9 @@ chmod 777 CumtHadoopLAB/restart.sh
 
 ## 脚本完成了那些事情？
 
-最初是想用一个脚本完成所有任务，但能力有限，只能拆分成三个脚本，他们分别做了这些事情：
+最初是想用一个脚本完成所有任务，但能力有限，只能拆分成三个脚本。
+
+提供的脚本分别做了这些事情：
 
 - env.sh:将在容器内需要运行的脚本移动到挂载的目录,启动一个容器,进入容器 。
 - second.sh:在容器内运行,解压java,hadoop的包,完成环境变量配置。
