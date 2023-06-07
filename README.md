@@ -99,7 +99,7 @@ ssh slave3 jps
 
 ```bash
 # 执行第四个脚本
-chmod 777 /CumtHadoopLAB/restart.sh
+chmod 777 CumtHadoopLAB/restart.sh
 ./CumtHadoopLAB/restart.sh
 ```
 
