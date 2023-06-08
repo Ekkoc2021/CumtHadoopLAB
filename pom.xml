@@ -13,6 +13,7 @@
         <module>HSheel</module>
         <module>Relation</module>
         <module>Combine</module>
+        <module>PageRank</module>
     </modules>
 
     <dependencies>
