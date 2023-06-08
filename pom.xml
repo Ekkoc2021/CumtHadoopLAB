@@ -11,6 +11,7 @@
     <modules>
         <module>WordCount</module>
         <module>HSheel</module>
+        <module>Relation</module>
     </modules>
 
     <dependencies>
