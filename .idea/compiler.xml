@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HSheel" />
-        <module name="WordCount" />
         <module name="Relation" />
+        <module name="WordCount" />
+        <module name="Combine" />
       </profile>
     </annotationProcessing>
   </component>
