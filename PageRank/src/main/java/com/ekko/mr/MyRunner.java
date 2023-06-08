@@ -15,12 +15,12 @@ public class MyRunner {
         Configuration conf = new Configuration();
         
         //指定输入数据输入地址
-//        String pathIn = args[0];
-        String pathIn = "E:\\workspace\\hadoop\\PageRank";
+        String pathIn = args[0];
+//        String pathIn = "E:\\workspace\\hadoop\\PageRank";
 
         //指定输出数据存放地址
-//        String pathOut = args[1];
-        String pathOut = "E:\\workspace\\hadoop\\PageRank\\output";
+        String pathOut = args[1];
+//        String pathOut = "E:\\workspace\\hadoop\\PageRank\\output";
 
         //加入循环迭代
         for (int i = 1; i <= 5; i++) {
