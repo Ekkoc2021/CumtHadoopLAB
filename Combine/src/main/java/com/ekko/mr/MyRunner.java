@@ -33,12 +33,12 @@ public class MyRunner {
         job.setMapOutputValueClass(Text.class);
         
         //指定要处理的输入数据存放路径
-//        FileInputFormat.setInputPaths(job, new Path(args[0]));
-        FileInputFormat.setInputPaths(job, new Path("E:\\workspace\\hadoop\\input"));
+        FileInputFormat.setInputPaths(job, new Path(args[0]));
+//        FileInputFormat.setInputPaths(job, new Path("E:\\workspace\\hadoop\\input"));
 
         //指定处理结果的输出数据存放路径
-//        FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        FileOutputFormat.setOutputPath(job, new Path("E:\\workspace\\hadoop\\input\\output"));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+//        FileOutputFormat.setOutputPath(job, new Path("E:\\workspace\\hadoop\\input\\output"));
 
         //将job提交给集群运行 
         job.waitForCompletion(true);
