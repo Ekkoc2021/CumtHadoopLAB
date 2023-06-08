@@ -28,17 +28,16 @@ public class MyRunner {
         //指定reduce的输出数据key-value类型
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(LongWritable.class);
-        
-        
+
         //指定mapper的输出数据key-value类型
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(LongWritable.class);
         
         //指定要处理的输入数据存放路径
-        FileInputFormat.setInputPaths(job, new Path("hdfs://node1.cg:8020/user/cg/input"));
+        FileInputFormat.setInputPaths(job, new Path(args[0]));
         
         //指定处理结果的输出数据存放路径
-        FileOutputFormat.setOutputPath(job, new Path("hdfs://node1.cg:8020/user/cg/output"));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
         
         //将job提交给集群运行 
         job.waitForCompletion(true);
