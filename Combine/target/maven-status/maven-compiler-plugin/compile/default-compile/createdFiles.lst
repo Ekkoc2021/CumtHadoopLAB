@@ -1,4 +1,4 @@
-com\ekko\re\MyCombiner.class
-com\ekko\re\MyReducer.class
-com\ekko\re\MyRunner.class
-com\ekko\re\MyMapper.class
+com\ekko\mr\MyCombiner.class
+com\ekko\mr\MyRunner.class
+com\ekko\mr\MyMapper.class
+com\ekko\mr\MyReducer.class
