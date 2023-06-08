@@ -29,7 +29,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException {
         if (args.length < 2) {
-            System.out.println("Usage: HShell.jar <command> <arguments>");
+            System.out.println("Usage: HSheel-1.0-SNAPSHOT.jar <command> <arguments>");
             System.exit(1);
         }
 
