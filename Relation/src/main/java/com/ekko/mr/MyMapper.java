@@ -26,8 +26,8 @@ public class MyMapper extends Mapper<LongWritable, Text, Text, Text> {
         //key是这一行数据的起始偏移量，value是这一行的文本内容
         
         //1:切分名字，用空格隔开，前面的是孩子，后面的是父母
-        String child = value.toString().split(" ")[0];
-        String parent = value.toString().split(" ")[1];
+        String child = value.toString().split("\\s+")[0];
+        String parent = value.toString().split("\\s+")[1];
         //2:产生正序与逆序的key-value同时压入context
         context.write(new Text(child), new Text("-" + parent));
         context.write(new Text(parent), new Text("+" + child));
