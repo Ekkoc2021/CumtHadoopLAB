@@ -13,6 +13,7 @@
         <module name="WordCount" />
         <module name="Combine" />
         <module name="PageRank" />
+        <module name="Lab5" />
         <module name="Lab4_1" />
         <module name="ReverseIndex" />
       </profile>
