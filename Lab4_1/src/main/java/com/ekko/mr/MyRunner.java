@@ -34,11 +34,11 @@ public class MyRunner {
         job.setMapOutputKeyClass(LongWritable.class);
         job.setMapOutputValueClass(NullWritable.class);
 
-//        FileInputFormat.setInputPaths(job,new Path(args[0]));
-        FileInputFormat.setInputPaths(job,new Path("E:\\workspace\\hadoop\\twofile"));
+        FileInputFormat.setInputPaths(job,new Path(args[0]));
+//        FileInputFormat.setInputPaths(job,new Path("E:\\workspace\\hadoop\\twofile"));
 
-//        FileOutputFormat.setOutputPath(job,new Path(args[1]));
-        FileOutputFormat.setOutputPath(job,new Path("E:\\workspace\\hadoop\\twofile\\output"));
+        FileOutputFormat.setOutputPath(job,new Path(args[1]));
+//        FileOutputFormat.setOutputPath(job,new Path("E:\\workspace\\hadoop\\twofile\\output"));
 
         job.waitForCompletion(true);
     }
