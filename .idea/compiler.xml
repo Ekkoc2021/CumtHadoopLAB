@@ -6,18 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="step12" />
+        <module name="step11" />
+        <module name="Combine" />
+        <module name="step8" />
+        <module name="step9" />
+        <module name="PageRank" />
+        <module name="step10_0" />
+        <module name="step10_1" />
+        <module name="step13_0" />
         <module name="HSheel" />
         <module name="Relation" />
-        <module name="Lab4" />
-        <module name="PhoneInternetData" />
+        <module name="step13_1" />
         <module name="WordCount" />
-        <module name="Combine" />
-        <module name="PageRank" />
-        <module name="Lab5" />
-        <module name="Lab4_1" />
-        <module name="Lab6" />
-        <module name="ReverseIndex" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="step13" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

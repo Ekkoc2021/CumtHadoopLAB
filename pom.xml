@@ -14,12 +14,14 @@
         <module>Relation</module>
         <module>Combine</module>
         <module>PageRank</module>
-        <module>PhoneInternetData</module>
-        <module>ReverseIndex</module>
-        <module>Lab4</module>
-        <module>Lab4_1</module>
-        <module>Lab5</module>
-        <module>Lab6</module>
+        <module>step8</module>
+        <module>step9</module>
+        <module>step10_0</module>
+        <module>step10_1</module>
+        <module>step11</module>
+        <module>step12</module>
+        <module>step13_0</module>
+        <module>step13_1</module>
     </modules>
 
     <dependencies>
