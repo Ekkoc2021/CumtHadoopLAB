@@ -31,7 +31,8 @@ public class MyRunner {
         //指定mapper的输出数据key-value类型
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);
-        
+
+
         //指定要处理的输入数据存放路径
         FileInputFormat.setInputPaths(job, new Path(args[0]));
 //        FileInputFormat.setInputPaths(job, new Path("E:\\workspace\\hadoop\\input"));
