@@ -32,7 +32,6 @@ public class Main {
             System.out.println("Usage: HSheel-1.0-SNAPSHOT.jar <command> <arguments>");
             System.exit(1);
         }
-
         String command = args[0];
         String[] arguments = new String[args.length - 1];
         System.arraycopy(args, 1, arguments, 0, arguments.length);
