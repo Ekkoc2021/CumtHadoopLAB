@@ -15,6 +15,7 @@
         <module name="PageRank" />
         <module name="Lab5" />
         <module name="Lab4_1" />
+        <module name="Lab6" />
         <module name="ReverseIndex" />
       </profile>
     </annotationProcessing>
