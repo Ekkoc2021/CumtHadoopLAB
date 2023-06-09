@@ -14,6 +14,10 @@
         <module>Relation</module>
         <module>Combine</module>
         <module>PageRank</module>
+        <module>PhoneInternetData</module>
+        <module>ReverseIndex</module>
+        <module>Lab4</module>
+        <module>Lab4_1</module>
     </modules>
 
     <dependencies>

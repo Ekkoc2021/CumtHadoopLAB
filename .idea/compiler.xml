@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HSheel" />
-        <module name="PageRank" />
         <module name="Relation" />
+        <module name="Lab4" />
+        <module name="PhoneInternetData" />
         <module name="WordCount" />
         <module name="Combine" />
+        <module name="PageRank" />
+        <module name="Lab4_1" />
+        <module name="ReverseIndex" />
       </profile>
     </annotationProcessing>
   </component>
