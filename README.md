@@ -124,3 +124,21 @@ chmod 777 CumtHadoopLAB/restart.sh
 
 
 
+## Hbase部署脚本
+
+还原桌面===>每个小实验都是新环境，吐了。
+
+启动完集群后部署hbase
+
+```
+chmod 777 /course/hbaseIni.sh
+./course/hbaseIni.sh
+
+source ~/.bashrc
+source /usr/local/hbase/conf/hbase-env.sh
+
+# 回到实验步骤启动hbase
+start-hbase.sh
+hbase shell
+```
+
