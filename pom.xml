@@ -22,7 +22,7 @@
         <module>step12</module>
         <module>step13_0</module>
         <module>step13_1</module>
-        <module>hbase_step_8</module>
+        <module>HbaseLab_Code</module>
     </modules>
 
     <dependencies>

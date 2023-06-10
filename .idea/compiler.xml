@@ -18,7 +18,7 @@
         <module name="HSheel" />
         <module name="Relation" />
         <module name="step13_1" />
-        <module name="hbase_step_8" />
+        <module name="HbaseLab_Code" />
         <module name="WordCount" />
       </profile>
     </annotationProcessing>
