@@ -25,6 +25,7 @@ public class MyMapper extends Mapper<LongWritable, Text, Text, Text> {
         //具体业务逻辑就写在这个方法体中，而且我们业务要处理的数据已经被框架传递进来，在方法的参数中key-value
         //key是这一行数据的起始偏移量，value是这一行的文本内容
         //1:切分名字，用空格隔开，前面的是孩子，后面的是父母
+
         String child = value.toString().split("\\s+")[0];
         String parent = value.toString().split("\\s+")[1];
         //2:产生正序与逆序的key-value同时压入context
