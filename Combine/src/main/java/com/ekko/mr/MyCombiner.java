@@ -8,7 +8,6 @@ public class MyCombiner extends Reducer<Text,Text,Text,Text>{
     
     //1:声明输出的value变量
     private Text info = new Text();
-    
     public void reduce(Text key,Iterable<Text>values,Context context) 
             throws IOException, InterruptedException{
         //2:声明计数变量sum并初始化为0，统计一个文件中每一个单词的出现次数
