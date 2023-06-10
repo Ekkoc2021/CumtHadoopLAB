@@ -137,7 +137,7 @@ chmod 777 CumtHadoopLAB/restart.sh
 启动完集群后部署hbase：
 
 ```bash
-docker exec -it master	/bin/bash
+docker exec -it master /bin/bash
 
 chmod 777 /course/hbaseIni.sh
 ./course/hbaseIni.sh
