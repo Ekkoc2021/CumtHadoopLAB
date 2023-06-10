@@ -26,7 +26,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.exmple.hbasedemo.UpdateData</mainClass> <!-- 你的主类名 -->
+                            <mainClass>com.exmple.hbasedemo.DeleteData</mainClass> <!-- 你的主类名 -->
                         </manifest>
                     </archive>
                 </configuration>

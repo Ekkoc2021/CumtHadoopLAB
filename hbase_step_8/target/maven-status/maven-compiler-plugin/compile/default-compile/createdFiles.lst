@@ -3,6 +3,7 @@ com\exmple\hbasedemo\TableExist.class
 com\exmple\hbasedemo\MyConnect.class
 com\exmple\hbasedemo\PutData.class
 com\exmple\hbasedemo\UpdateData.class
+com\exmple\hbasedemo\DeleteData.class
 com\exmple\hbasedemo\ListTable.class
 com\exmple\hbasedemo\ScanData.class
 com\exmple\hbasedemo\CreateTable.class
