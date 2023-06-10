@@ -128,9 +128,11 @@ chmod 777 CumtHadoopLAB/restart.sh
 
 还原桌面===>每个小实验都是新环境，吐了。
 
-启动完集群后部署hbase
+启动完集群后部署hbase：
 
-```
+```bash
+docker exec -it master	/bin/bash
+
 chmod 777 /course/hbaseIni.sh
 ./course/hbaseIni.sh
 
