@@ -26,7 +26,13 @@ docker rm -f master slave1 slave2 slave3 # 删除容器
 apt install -y git 
 # 拉取仓库到本地
 # 执行完命令后，你可以在你执行clone命令的这个目录看到一个新的目录CumtHadoopLAB
+# 下面两条命令选一条执行，推荐第二条，实验环境有时候连不上GitHub。
+
+# github
 git clone https://github.com/Ekkoc2021/CumtHadoopLAB.git
+
+# gitee
+git clone https://gitee.com/abcekko/CumtHadoopLAB.git
 ```
 可以在CumtHadoopLAB目录下看到当前文档，直接在实验的环境里面copy，效率会高一点：
 ```bash
@@ -67,7 +73,7 @@ chmod 777 CumtHadoopLAB/third.sh
 下面是实验一的启动Hadoop集群
 
 ```bash
-docker exec -it master	/bin/bash
+docker exec -it master /bin/bash
 
 # 这一步是使用掉首次ssh登录，输入yes，由于要输入yes，要一条一条复制的执行
 ssh master jps
@@ -141,6 +147,5 @@ source /usr/local/hbase/conf/hbase-env.sh
 
 # 回到实验步骤启动hbase
 start-hbase.sh
-hbase shell
 ```
 
