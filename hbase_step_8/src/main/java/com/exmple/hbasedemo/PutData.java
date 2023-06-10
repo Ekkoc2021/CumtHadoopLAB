@@ -46,7 +46,9 @@ public class PutData{
         FileReader reader = new FileReader("/data/input.dat");
 
         String currentDirectory = System.getProperty("user.dir");
+        System.out.println("-----------------------------------------------");
         System.out.println("----==：" + currentDirectory);
+        System.out.println("-----------------------------------------------");
 
         BufferedReader br = new BufferedReader(reader);
         String str = null;
