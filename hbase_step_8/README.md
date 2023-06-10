@@ -6,3 +6,5 @@
 export HADOOP_CLASSPATH=/usr/local/hbase/lib/*
 ```
 
+需要根据运行的主类设置pom文件,然后再重新打包
+
