@@ -10,8 +10,8 @@
 
 "yes" | cp CumtHadoopLAB/slaves /headless/course
 
-"yes" | cp CumtHadoopLAB/hbase/hbaseIni.sh /headless/cours
-"yes" | cp CumtHadoopLAB/hbase/hbase-site.xml /headless/cours
+"yes" | cp CumtHadoopLAB/hbase/hbaseIni.sh /headless/course
+"yes" | cp CumtHadoopLAB/hbase/hbase-site.xml /headless/course
 
 docker run --name master01 --privileged -itd -v /cgsrc:/cgsrc:ro -v /headless/course/:/course hadoop_node /service_start.sh
 
