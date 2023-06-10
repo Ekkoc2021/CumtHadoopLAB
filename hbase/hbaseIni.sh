@@ -22,3 +22,5 @@ echo -e $en >> /usr/local/hbase/conf/hbase-env.sh
 source /usr/local/hbase/conf/hbase-env.sh
 
 "yes" | cp /course/hbase-site.xml /usr/local/hbase/conf/hbase-site.xml
+
+echo "export HADOOP_CLASSPATH=/usr/local/hbase/lib/*" >> /usr/local/hadoop/etc/hadoop/hadoop-env.sh
