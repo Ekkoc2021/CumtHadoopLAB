@@ -9,6 +9,7 @@
 "yes" | cp CumtHadoopLAB/yarn-site.xml /headless/course
 
 "yes" | cp CumtHadoopLAB/slaves /headless/course
+"yes" | cp CumtHadoopLAB/start-myhadoop.sh /headless/course
 
 "yes" | cp CumtHadoopLAB/hbase/hbaseIni.sh /headless/course
 "yes" | cp CumtHadoopLAB/hbase/hbase-site.xml /headless/course
