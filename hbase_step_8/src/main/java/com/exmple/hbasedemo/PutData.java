@@ -44,6 +44,10 @@ public class PutData{
     }
     public static void putData(String tableName) throws IOException {
         FileReader reader = new FileReader("/data/input.dat");
+
+        String currentDirectory = System.getProperty("user.dir");
+        System.out.println("----==：" + currentDirectory);
+
         BufferedReader br = new BufferedReader(reader);
         String str = null;
         Table table = connection.getTable(TableName.valueOf(tableName));
