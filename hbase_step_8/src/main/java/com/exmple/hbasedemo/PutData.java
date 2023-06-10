@@ -43,7 +43,7 @@ public class PutData{
         }
     }
     public static void putData(String tableName) throws IOException {
-        FileReader reader = new FileReader("../data/input.dat");
+        FileReader reader = new FileReader("data/input.dat");
         BufferedReader br = new BufferedReader(reader);
         String str = null;
         Table table = connection.getTable(TableName.valueOf(tableName));
