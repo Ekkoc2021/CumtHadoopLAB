@@ -14,7 +14,7 @@ import java.io.IOException;
  * @Description: 测试链接hbase
  * @Version 1.0
  */
-public class Main {
+public class MyConnect {
     public static Configuration configuration;
     public static Connection connection;
     public static Admin admin;
