@@ -22,6 +22,7 @@ public class MyCombiner extends Reducer<Text,Text,Text,Text> {
     public void reduce(Text key,Iterable<Text>values,Context context)
             throws IOException, InterruptedException{
         // 取出所有行号,进行拼接
+
         String lines="";
         for(Text value:values){
             if("".equals(lines)) {
