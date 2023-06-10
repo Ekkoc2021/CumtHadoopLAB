@@ -1,0 +1,3 @@
+com\ekko\wc\WcMap.class
+com\ekko\wc\WcReduce.class
+com\ekko\wc\WcRunner.class
