@@ -23,6 +23,7 @@
         <module>step13_0</module>
         <module>step13_1</module>
         <module>HbaseLab_Code</module>
+        <module>zk</module>
     </modules>
 
     <dependencies>

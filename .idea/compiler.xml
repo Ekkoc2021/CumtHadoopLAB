@@ -16,6 +16,7 @@
         <module name="step10_1" />
         <module name="step13_0" />
         <module name="HSheel" />
+        <module name="zk" />
         <module name="Relation" />
         <module name="step13_1" />
         <module name="HbaseLab_Code" />
