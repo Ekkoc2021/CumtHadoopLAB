@@ -26,7 +26,6 @@ public class DistributedZkLock {
     //
     //如果进程的zk对象都是同一个,如果进程某个获取锁线程挂了,他的创建的锁无法被释放.
     // 如何确保线程的锁一定被释放? 如果每个zklock对象都不是同的zk对象,首次连接过慢?
-    private Boolean isGet = false;
     private String lockPath;
     public Boolean zklock() {
         try {
