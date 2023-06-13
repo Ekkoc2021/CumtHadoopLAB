@@ -59,7 +59,7 @@ public class ZkTest {
      * 30个线程,一个线程模拟一个分布式节点
      */
     @Test
-    public void testConnect() {
+    public void zkDistributedLockTest() {
         try {
             // 创建一个Watcher对象，用于处理ZooKeeper事件
             Watcher watcher = watchedEvent -> {
