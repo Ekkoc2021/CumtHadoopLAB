@@ -5,6 +5,8 @@ import org.apache.zookeeper.data.Stat;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author YLL
@@ -16,10 +18,46 @@ import java.io.IOException;
  */
 public class ZkTest {
     private static final String ZOOKEEPER_HOST = "47.100.220.147:2181";
-    private static final int SESSION_TIMEOUT = 40000;
+    private static final int SESSION_TIMEOUT = 50000;
+
     private static final String USERNAME = "root";
     private static final String PASSWORD = "12345";
 
+    int count = 20;
+    CountDownLatch countDownLatch = new CountDownLatch(30);
+
+    /**
+     * @author YLL
+     * @date 2023/6/13 9:27
+     * @Description: 不加锁的情况下,30人购买20张票,每个人都购买到了,最后还有余票,出现多人同时买到同一张票
+     */
+    @Test
+    public void lockTest() throws InterruptedException {
+        for (int i = 0; i < 30; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    if (count > 0) {
+                        count--;
+                        System.out.println(Thread.currentThread().getName() + ",购买到票!当前票数:" + count);
+                    }else {
+                        System.out.println(Thread.currentThread().getName() + ",未购买到票!当前票数:" + count);
+                    }
+                    countDownLatch.countDown();
+
+                }
+            }).start();
+        }
+        countDownLatch.await();
+    }
+
+
+    /**
+     * @author YLL
+     * @date 2023/6/13 9:29
+     * @Description: 分布式锁解决,同时购票问题!
+     * 30个线程,一个线程模拟一个分布式节点
+     */
     @Test
     public void testConnect() {
         try {
@@ -36,30 +74,36 @@ public class ZkTest {
             // 连接成功，执行自定义的操作
             System.out.println("Connected to ZooKeeper");
 
-            // ... 在这里执行您的操作 ...
-//            String s1 = zooKeeper.create("/java", "hello world".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.CONTAINER);
-//            System.out.println(s1);
 
-            byte[] data = zooKeeper.getData("/java", false, new Stat());
-            String s = new String(data, "UTF-8");
-            System.out.println(s);
+            for (int i = 0; i < 30; i++) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        DistributedZkLock distributedZkLock = new DistributedZkLock(zooKeeper);
+                        if (distributedZkLock.zklock()) {
+                            System.out.println("加锁成功!");
+                            if (count > 0) {
+                                count = count - 1;
+                                System.out.println(Thread.currentThread().getName() + ",购买到票!购买后剩余票数:" + count);
+                            } else {
+                                System.out.println(Thread.currentThread().getName() + ",未购买到票!当前余票:" + count);
+                            }
 
-            long l = System.currentTimeMillis();
-            for (int i = 0; i < 10; i++) {
-                data = zooKeeper.getData("/java", false, new Stat());
-                s=new String(data, "UTF-8");
-                System.out.println(s);
-                Thread.sleep(2000);
+                            distributedZkLock.unzklock();
+                            countDownLatch.countDown();
+
+                        }
+                    }
+                }).start();
             }
-            long l1 = System.currentTimeMillis();
-            System.out.println(l1-1);
-
-
+            countDownLatch.await(200l, TimeUnit.SECONDS);
             // 关闭ZooKeeper连接
             zooKeeper.close();
-        } catch (InterruptedException | IOException | KeeperException e) {
+        } catch (InterruptedException | IOException e) {
             e.printStackTrace();
         }
 
     }
+
+
 }
