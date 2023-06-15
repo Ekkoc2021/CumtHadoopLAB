@@ -22,8 +22,8 @@ import java.util.List;
 @AllArgsConstructor
 public class zkServiceDiscovery {
     private ZooKeeper zk;
-    private String appName;
-    private String serviceName;
+    private String appName; // 微服务整个项目名称
+    private String serviceName; // 微服务模块名称
     private static boolean isCreateAppPath = false;
     private static boolean isCreateServicePath = false;
 
@@ -121,9 +121,14 @@ public class zkServiceDiscovery {
      * @param servName 服务名称
      * @return List<String>
      */
-    public List<String> getServeiceList(String servName){
+    public List<String> getServeiceList(String servName,String clientAddr){
         List<String> serviveList = new ArrayList<>();
         updateServiceList(servName,serviveList);
+        try {
+            registerClient(clientAddr,servName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return serviveList;
     }
 
