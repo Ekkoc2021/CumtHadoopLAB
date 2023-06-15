@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  * @Description: TODO
  * @Version 1.0
  */
-public class ZkTest {
+public class zkDistibutedLockTest {
     private static final String ZOOKEEPER_HOST = "47.100.220.147:2181";
     private static final int SESSION_TIMEOUT = 50000;
 
